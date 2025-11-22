@@ -1,4 +1,3 @@
--- Instances: 22 | Scripts: 0 | Modules: 0 | Tags: 0
 local MeteoriteLib = {};
 
 function MeteoriteLib:NewKeyPoint(GetKeyLink, API, KeyTest, func)
@@ -109,17 +108,7 @@ function MeteoriteLib:NewKeyPoint(GetKeyLink, API, KeyTest, func)
 		MeteoriteLib["b"]["Name"] = [[CheckKey]];
 		MeteoriteLib["b"]["Position"] = UDim2.new(0.03364, 0, 0.55435, 0);
 		MeteoriteLib["b"].MouseButton1Click:Connect(function()
-			if MeteoriteLib["13"].Text == KeyTest then
-				MeteoriteLib:Notif("Meteor Key Guard", "Key is valid. Ready to go!")
-				if func then
-					func()
-					MeteoriteLib["2"]:Destroy()
-				else
-					return
-				end
-			else
-				MeteoriteLib:Notif("Meteor Key Guard", "Invalid key")
-			end
+			func()
 		end)
 
 
